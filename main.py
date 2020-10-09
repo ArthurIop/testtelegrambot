@@ -1,0 +1,23 @@
+import random
+import telebot
+token = '1228856960:AAFuMLjSae-k072akc9OTeM9HxwMrI5GqNE'
+bot = telebot.TeleBot(token)
+
+@bot.message_handler(content_types=["text"])
+def repeat_all_messages(message):
+    numb = random.randint(0,4)
+    if numb == 0:
+        mes = 'test123'
+    if numb == 1:
+        mes = 'РУСсский Тескт'
+    if numb == 2:
+        mes = '1239293192939219392193921321'
+    if numb == 3:
+        mes = 'Engilsh text ... Kollaa'
+    if numb == 4:
+        mes = '!@#%#$%$%^#&^%*&^*(&*)ZCXXZVBNBN<M>?'
+    bot.send_message(message.chat.id, mes)
+
+
+if __name__ == '__main__':
+     bot.polling(none_stop=True)
