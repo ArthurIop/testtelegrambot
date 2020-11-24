@@ -1,6 +1,6 @@
 import random
 import telebot
-token = '1228856960:AAFuMLjSae-k072akc9OTeM9HxwMrI5GqNE'
+token = 'teken'
 bot = telebot.TeleBot(token)
 
 @bot.message_handler(content_types=["text"])
